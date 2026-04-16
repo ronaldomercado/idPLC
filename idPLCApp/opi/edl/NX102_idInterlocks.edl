@@ -4,7 +4,7 @@ major 4
 minor 0
 release 1
 x 337
-y 258
+y 295
 w 1110
 h 730
 font "arial-medium-r-12.0"
@@ -22,6 +22,246 @@ botShadowColor index 11
 showGrid
 gridSize 8
 endScreenProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 680
+y 45
+w 259
+h 308
+lineColor index 14
+fill
+fillColor index 5
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 802
+y 43
+w 115
+h 40
+fgColor index 25
+onColor index 3
+offColor index 3
+topShadowColor index 1
+botShadowColor index 11
+controlPv "TS99K-MO-PLC-01:MAIN:RESET.PROC"
+pressValue "1"
+3d
+font "arial-medium-r-16.0"
+visPv "TS99K-MO-PLC-01:MAIN:INTERFACE"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 802
+y 43
+w 115
+h 40
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 802
+y 43
+w 115
+h 40
+font "arial-bold-r-14.0"
+fontAlign "center"
+fgColor index 25
+bgColor index 0
+useDisplayBg
+value {
+  "Reset"
+  "Interlocks"
+}
+endObjectProperties
+
+endGroup
+
+visPv "TS99K-MO-PLC-01:MAIN:AUTORESET.B"
+visInvert
+visMin "1"
+visMax "2"
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 695
+y 380
+w 381
+h 344
+lineColor index 14
+fill
+fillColor index 5
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 823
+y 380
+w 115
+h 40
+fgColor index 25
+onColor index 3
+offColor index 3
+topShadowColor index 1
+botShadowColor index 11
+controlPv "TS99K-MO-TILT-01:RESET.PROC"
+pressValue "1"
+3d
+font "arial-medium-r-16.0"
+visPv "TS99K-MO-TILT-01:INTERFACE"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 821
+y 382
+w 115
+h 40
+font "arial-bold-r-14.0"
+fontAlign "center"
+fgColor index 25
+bgColor index 0
+useDisplayBg
+value {
+  "Reset"
+  "Interlocks"
+}
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 351
+y 464
+w 339
+h 259
+lineColor index 14
+fill
+fillColor index 5
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 479
+y 474
+w 115
+h 40
+fgColor index 25
+onColor index 3
+offColor index 3
+topShadowColor index 1
+botShadowColor index 11
+controlPv "TS99K-MO-PLC-01:SLIM:RESET.PROC"
+pressValue "1"
+3d
+font "arial-medium-r-16.0"
+visPv "TS99K-MO-PLC-01:SLIM:INTERFACE"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 6
+y 465
+w 339
+h 259
+lineColor index 14
+fill
+fillColor index 5
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 134
+y 473
+w 115
+h 40
+fgColor index 25
+onColor index 3
+offColor index 3
+topShadowColor index 1
+botShadowColor index 11
+controlPv "TS99K-MO-PLC-01:LIM:RESET.PROC"
+pressValue "1"
+3d
+font "arial-medium-r-16.0"
+visPv "TS99K-MO-PLC-01:LIM:INTERFACE"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 134
+y 473
+w 115
+h 40
+font "arial-bold-r-14.0"
+fontAlign "center"
+fgColor index 25
+bgColor index 0
+useDisplayBg
+value {
+  "Reset"
+  "Interlocks"
+}
+endObjectProperties
 
 # (Static Text)
 object activeXTextClass
@@ -897,21 +1137,6 @@ bgColor index 10
 font "arial-medium-r-14.0"
 endObjectProperties
 
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 680
-y 45
-w 259
-h 308
-lineColor index 14
-fill
-fillColor index 5
-endObjectProperties
-
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
@@ -1261,132 +1486,6 @@ visMin "0"
 visMax "1"
 endObjectProperties
 
-# (Message Button)
-object activeMessageButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 802
-y 43
-w 115
-h 40
-fgColor index 25
-onColor index 3
-offColor index 3
-topShadowColor index 1
-botShadowColor index 11
-controlPv "TS99K-MO-PLC-01:MAIN:RESET.PROC"
-pressValue "1"
-3d
-font "arial-medium-r-16.0"
-visPv "TS99K-MO-PLC-01:MAIN:INTERFACE"
-visMin "0"
-visMax "1"
-endObjectProperties
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 802
-y 43
-w 115
-h 40
-
-beginGroup
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 799
-y 45
-w 115
-h 40
-font "arial-bold-r-14.0"
-fontAlign "center"
-fgColor index 25
-bgColor index 0
-useDisplayBg
-value {
-  "Reset Interlocks"
-  "(Auto-reset on)"
-}
-endObjectProperties
-
-endGroup
-
-visPv "TS99K-MO-PLC-01:MAIN:AUTORESET.B"
-visMin "1"
-visMax "2"
-endObjectProperties
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 802
-y 43
-w 115
-h 40
-
-beginGroup
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 799
-y 45
-w 115
-h 40
-font "arial-bold-r-14.0"
-fontAlign "center"
-fgColor index 25
-bgColor index 0
-useDisplayBg
-value {
-  "Reset"
-  "Interlocks"
-}
-endObjectProperties
-
-endGroup
-
-visPv "TS99K-MO-PLC-01:MAIN:AUTORESET.B"
-visInvert
-visMin "1"
-visMax "2"
-endObjectProperties
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 802
-y 43
-w 115
-h 40
-lineColor index 5
-fill
-fillColor index 5
-lineWidth 0
-visPv "TS99K-MO-PLC-01:MAIN:INTERFACE"
-visMin "1"
-visMax "2"
-endObjectProperties
-
 # (Byte)
 object ByteClass
 beginObjectProperties
@@ -1423,21 +1522,6 @@ endian "little"
 numBits 11
 endObjectProperties
 
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 695
-y 380
-w 339
-h 344
-lineColor index 14
-fill
-fillColor index 5
-endObjectProperties
-
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
@@ -1465,7 +1549,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 859
+x 869
 y 420
 w 170
 h 20
@@ -1481,7 +1565,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 859
+x 869
 y 444
 w 170
 h 20
@@ -1497,7 +1581,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 859
+x 869
 y 468
 w 170
 h 20
@@ -1513,7 +1597,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 859
+x 869
 y 492
 w 170
 h 20
@@ -1529,7 +1613,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 859
+x 869
 y 516
 w 170
 h 20
@@ -1545,7 +1629,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 859
+x 869
 y 540
 w 170
 h 20
@@ -1561,7 +1645,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 859
+x 869
 y 564
 w 170
 h 20
@@ -1577,7 +1661,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 859
+x 869
 y 588
 w 170
 h 20
@@ -1593,7 +1677,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 859
+x 869
 y 612
 w 170
 h 20
@@ -1609,7 +1693,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 859
+x 869
 y 684
 w 170
 h 20
@@ -1625,7 +1709,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 859
+x 869
 y 636
 w 170
 h 20
@@ -1641,7 +1725,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 859
+x 869
 y 660
 w 170
 h 20
@@ -1803,132 +1887,6 @@ visMin "0"
 visMax "1"
 endObjectProperties
 
-# (Message Button)
-object activeMessageButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 823
-y 380
-w 115
-h 40
-fgColor index 25
-onColor index 3
-offColor index 3
-topShadowColor index 1
-botShadowColor index 11
-controlPv "TS99K-MO-TILT-01:RESET.PROC"
-pressValue "1"
-3d
-font "arial-medium-r-16.0"
-visPv "TS99K-MO-TILT-01:INTERFACE"
-visMin "0"
-visMax "1"
-endObjectProperties
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 823
-y 380
-w 115
-h 40
-
-beginGroup
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 821
-y 382
-w 115
-h 40
-font "arial-bold-r-14.0"
-fontAlign "center"
-fgColor index 25
-bgColor index 0
-useDisplayBg
-value {
-  "Reset Interlocks"
-  "(Auto-reset on)"
-}
-endObjectProperties
-
-endGroup
-
-visPv "TS99K-MO-TILT-01:AUTORESET.B"
-visMin "1"
-visMax "2"
-endObjectProperties
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 823
-y 380
-w 115
-h 40
-
-beginGroup
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 821
-y 382
-w 115
-h 40
-font "arial-bold-r-14.0"
-fontAlign "center"
-fgColor index 25
-bgColor index 0
-useDisplayBg
-value {
-  "Reset"
-  "Interlocks"
-}
-endObjectProperties
-
-endGroup
-
-visPv "TS99K-MO-TILT-01:AUTORESET.B"
-visInvert
-visMin "1"
-visMax "2"
-endObjectProperties
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 823
-y 380
-w 115
-h 40
-lineColor index 5
-fill
-fillColor index 5
-lineWidth 0
-visPv "TS99K-MO-TILT-01:INTERFACE"
-visMin "1"
-visMax "2"
-endObjectProperties
-
 # (Byte)
 object ByteClass
 beginObjectProperties
@@ -1971,7 +1929,7 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 776
+x 781
 y 420
 w 80
 h 24
@@ -1996,7 +1954,7 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 776
+x 781
 y 444
 w 80
 h 24
@@ -2021,7 +1979,7 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 776
+x 781
 y 492
 w 80
 h 24
@@ -2046,7 +2004,7 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 776
+x 781
 y 516
 w 80
 h 24
@@ -2071,7 +2029,7 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 776
+x 781
 y 564
 w 80
 h 24
@@ -2096,7 +2054,7 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 776
+x 781
 y 588
 w 80
 h 24
@@ -2121,7 +2079,7 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 776
+x 781
 y 636
 w 80
 h 24
@@ -2146,7 +2104,7 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 776
+x 781
 y 660
 w 80
 h 24
@@ -2163,147 +2121,6 @@ offLabel "POT LABS"
 3d
 useEnumNumeric
 font "arial-medium-r-12.0"
-endObjectProperties
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 351
-y 466
-w 339
-h 259
-lineColor index 14
-fill
-fillColor index 5
-endObjectProperties
-
-# (Message Button)
-object activeMessageButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 479
-y 474
-w 115
-h 40
-fgColor index 25
-onColor index 3
-offColor index 3
-topShadowColor index 1
-botShadowColor index 11
-controlPv "TS99K-MO-PLC-01:SLIM:RESET.PROC"
-pressValue "1"
-3d
-font "arial-medium-r-16.0"
-visPv "TS99K-MO-PLC-01:SLIM:INTERFACE"
-visMin "0"
-visMax "1"
-endObjectProperties
-
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 479
-y 474
-w 115
-h 40
-lineColor index 5
-fill
-fillColor index 5
-lineWidth 0
-visPv "TS99K-MO-PLC-01:SLIM:INTERFACE"
-visMin "1"
-visMax "2"
-endObjectProperties
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 479
-y 474
-w 115
-h 40
-
-beginGroup
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 476
-y 470
-w 115
-h 40
-font "arial-bold-r-14.0"
-fontAlign "center"
-fgColor index 25
-bgColor index 0
-useDisplayBg
-value {
-  "Reset"
-  "Interlocks"
-}
-endObjectProperties
-
-endGroup
-
-visPv "TS99K-MO-PLC-01:SLIM:AUTORESET.B"
-visInvert
-visMin "1"
-visMax "2"
-endObjectProperties
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 479
-y 474
-w 115
-h 40
-
-beginGroup
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 476
-y 470
-w 115
-h 40
-font "arial-bold-r-14.0"
-fontAlign "center"
-fgColor index 25
-bgColor index 0
-useDisplayBg
-value {
-  "Reset Interlocks"
-  "(Auto-reset on)"
-}
-endObjectProperties
-
-endGroup
-
-visPv "TS99K-MO-PLC-01:SLIM:AUTORESET.B"
-visMin "1"
-visMax "2"
 endObjectProperties
 
 # (Group)
@@ -2464,7 +2281,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 517
+x 523
 y 681
 w 170
 h 20
@@ -2480,7 +2297,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 517
+x 523
 y 657
 w 170
 h 20
@@ -2496,7 +2313,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 517
+x 523
 y 633
 w 170
 h 20
@@ -2512,7 +2329,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 517
+x 523
 y 609
 w 170
 h 20
@@ -2528,7 +2345,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 517
+x 523
 y 585
 w 170
 h 20
@@ -2544,7 +2361,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 517
+x 523
 y 561
 w 170
 h 20
@@ -2560,7 +2377,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 517
+x 523
 y 537
 w 170
 h 20
@@ -2576,7 +2393,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 517
+x 523
 y 513
 w 170
 h 20
@@ -2613,7 +2430,7 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 435
+x 437
 y 513
 w 80
 h 24
@@ -2638,7 +2455,7 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 435
+x 437
 y 537
 w 80
 h 24
@@ -2663,7 +2480,7 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 435
+x 437
 y 561
 w 80
 h 24
@@ -2688,7 +2505,7 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 435
+x 437
 y 585
 w 80
 h 24
@@ -2713,7 +2530,7 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 435
+x 437
 y 609
 w 80
 h 24
@@ -2738,7 +2555,7 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 435
+x 437
 y 633
 w 80
 h 24
@@ -2763,7 +2580,7 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 435
+x 437
 y 657
 w 80
 h 24
@@ -2788,7 +2605,7 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 435
+x 437
 y 681
 w 80
 h 24
@@ -2843,28 +2660,13 @@ endian "little"
 numBits 8
 endObjectProperties
 
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 6
-y 465
-w 339
-h 259
-lineColor index 14
-fill
-fillColor index 5
-endObjectProperties
-
 # (Textupdate)
 object TextupdateClass
 beginObjectProperties
 major 10
 minor 0
 release 0
-x 174
+x 179
 y 681
 w 170
 h 20
@@ -2880,7 +2682,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 174
+x 179
 y 657
 w 170
 h 20
@@ -2896,7 +2698,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 174
+x 179
 y 633
 w 170
 h 20
@@ -2912,7 +2714,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 174
+x 179
 y 609
 w 170
 h 20
@@ -2928,7 +2730,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 174
+x 179
 y 585
 w 170
 h 20
@@ -2944,7 +2746,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 174
+x 179
 y 561
 w 170
 h 20
@@ -2960,7 +2762,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 174
+x 179
 y 537
 w 170
 h 20
@@ -2976,7 +2778,7 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 172
+x 179
 y 513
 w 170
 h 20
@@ -3165,114 +2967,7 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 134
-y 473
-w 115
-h 40
-fgColor index 25
-onColor index 3
-offColor index 3
-topShadowColor index 1
-botShadowColor index 11
-controlPv "TS99K-MO-PLC-01:LIM:RESET.PROC"
-pressValue "1"
-3d
-font "arial-medium-r-16.0"
-visPv "TS99K-MO-PLC-01:LIM:INTERFACE"
-visMin "0"
-visMax "1"
-endObjectProperties
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 134
-y 473
-w 115
-h 40
-
-beginGroup
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 134
-y 473
-w 115
-h 40
-font "arial-bold-r-14.0"
-fontAlign "center"
-fgColor index 25
-bgColor index 0
-useDisplayBg
-value {
-  "Reset Interlocks"
-  "(Auto-reset on)"
-}
-endObjectProperties
-
-endGroup
-
-visPv "TS99K-MO-PLC-01:LIM:AUTORESET.B"
-visMin "1"
-visMax "2"
-endObjectProperties
-
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 134
-y 473
-w 115
-h 40
-
-beginGroup
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 134
-y 473
-w 115
-h 40
-font "arial-bold-r-14.0"
-fontAlign "center"
-fgColor index 25
-bgColor index 0
-useDisplayBg
-value {
-  "Reset"
-  "Interlocks"
-}
-endObjectProperties
-
-endGroup
-
-visPv "TS99K-MO-PLC-01:LIM:AUTORESET.B"
-visInvert
-visMin "1"
-visMax "2"
-endObjectProperties
-
-# (Message Button)
-object activeMessageButtonClass
-beginObjectProperties
-major 4
-minor 1
-release 0
-x 88
+x 92
 y 513
 w 80
 h 24
@@ -3297,7 +2992,7 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 88
+x 92
 y 537
 w 80
 h 24
@@ -3322,7 +3017,7 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 88
+x 92
 y 561
 w 80
 h 24
@@ -3347,7 +3042,7 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 88
+x 92
 y 585
 w 80
 h 24
@@ -3372,7 +3067,7 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 88
+x 92
 y 609
 w 80
 h 24
@@ -3397,7 +3092,7 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 88
+x 92
 y 633
 w 80
 h 24
@@ -3422,7 +3117,7 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 88
+x 92
 y 657
 w 80
 h 24
@@ -3447,7 +3142,7 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 88
+x 92
 y 681
 w 80
 h 24
@@ -3702,5 +3397,26 @@ endObjectProperties
 
 endGroup
 
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 479
+y 474
+w 115
+h 40
+font "arial-bold-r-14.0"
+fontAlign "center"
+fgColor index 25
+bgColor index 0
+useDisplayBg
+value {
+  "Reset"
+  "Interlocks"
+}
 endObjectProperties
 
