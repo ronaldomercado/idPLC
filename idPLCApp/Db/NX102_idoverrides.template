@@ -1,0 +1,33 @@
+# template to send override request for ID recovery mode
+# System_Recovery_Request
+# Recovery_Mode_RB
+
+record(ao, "TS99K-MO-ORIDE-01:MODE:D103") {
+  field(DESC, "Enable PLC overrides")
+  field(SCAN, "Passive")
+  field(DTYP, "Soft Channel")
+  field(OUT, "TS99K-MO-ORIDE-01:OUT:D103 PP")
+  field(DOL, "1")
+  field(OMSL, "closed_loop")
+  field(DRVH, "2")
+}
+
+record(ao, "TS99K-MO-ORIDE-01:OUT:D103") {
+  field(DESC, "Write to control value on PLC")
+  field(SCAN, "Passive")
+  field(DTYP, "EtherIP")
+  field(OUT, "@pport System_Recovery_Request S 1")
+}
+
+# PLC override state
+# % archiver 10.0 Monitor
+record(bi, "TS99K-MO-PLC-01:ENAOR") {
+  field(DESC, "Overriden enable state")
+  field(DTYP, "EtherIP")
+  field(SCAN, "1 second")
+  field(ZNAM, "O/R disabled")
+  field(ONAM, "O/R enabled")
+  field(INP, "@pport Recovery_Mode_RB B 0")
+  field(ZSV, "NO_ALARM")
+  field(OSV, "NO_ALARM")
+}

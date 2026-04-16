@@ -1,0 +1,83 @@
+# % macro, __doc__, Template
+# % macro, name, gui
+# % macro, prefix, device prefix, e.g. SR02K-MO
+# % macro, axx, axis, e.g. 1
+# % macro, port, port name of ether_ip driver
+
+# % gui, $(name), edm, NX102_idpotscan.edl, prefix=$(prefix),axx=$(axx)
+
+record(ao, "$(prefix)-AXIS-0$(axx):PS:INDEX"){
+  field(DTYP, "EtherIP")
+  field(SCAN, "Passive")
+  field(DRVH, "1000")
+  field(DRVL, "-1000")
+  field(OUT,  "@$(port) PS.Buffer_Index[$(axx)] S 0.5")
+}
+
+record(ao, "$(prefix)-AXIS-0$(axx):PS:CLEAR") {
+  field(SCAN, "Passive")
+  field(DTYP, "Soft Channel")
+  field(OUT, "$(prefix)-AXIS-0$(axx):CONTROL:WR PP")
+  field(DOL, "1")
+  field(OMSL, "closed_loop")
+  field(DRVH, "3")
+}
+
+record(ao, "$(prefix)-AXIS-0$(axx):PS:SETIDX") {
+  field(SCAN, "Passive")
+  field(DTYP, "Soft Channel")
+  field(OUT, "$(prefix)-AXIS-0$(axx):CONTROL:WR PP")
+  field(DOL, "2")
+  field(OMSL, "closed_loop")
+  field(DRVH, "3")
+}
+record(ao, "$(prefix)-AXIS-0$(axx):PS:END") {
+  field(SCAN, "Passive")
+  field(DTYP, "Soft Channel")
+  field(OUT, "$(prefix)-AXIS-0$(axx):CONTROL:WR PP")
+  field(DOL, "3")
+  field(OMSL, "closed_loop")
+  field(DRVH, "3")
+}
+record(ao, "$(prefix)-AXIS-0$(axx):CONTROL:WR") {
+  field(DESC, "Write to control value on PLC")
+  field(SCAN, "Passive")
+  field(DTYP, "EtherIP")
+  field(OUT, "@$(port) PS.Cmd[$(axx)] S 1")
+}
+
+record(ao, "$(prefix)-AXIS-0$(axx):PS:OUT:POT") {
+  field(DTYP, "EtherIP")
+  field(SCAN, "Passive")
+  field(DRVH, "100000")
+  field(DRVL, "-100000")
+  field(PREC, "4")
+  field(OUT, "@$(port) PS.Pot_Value[$(axx)] S 0.5")
+}
+
+record(ai, "$(prefix)-AXIS-0$(axx):PS:POT") {
+  field(DTYP, "EtherIP")
+  field(INP, "@$(port) PS.Pot_Value_RB[$(axx)]")
+  field(SCAN, ".5 second")
+  field(EGU, "mm")
+  field(PREC, "4")
+  field(ADEL, "1")
+}
+
+record(ao, "$(prefix)-AXIS-0$(axx):PS:OUT:ENC") {
+  field(DTYP, "EtherIP")
+  field(SCAN, "Passive")
+  field(DRVH, "10000")
+  field(DRVL, "-10000")
+  field(PREC, "4")
+  field(OUT, "@$(port) PS.Enc_Value[$(axx)] S 0.5")
+}
+
+record(ai, "$(prefix)-AXIS-0$(axx):PS:ENC") {
+  field(DTYP, "EtherIP")
+  field(INP, "@$(port) PS.Enc_Value_RB[$(axx)]")
+  field(SCAN, ".5 second")
+  field(EGU, "mm")
+  field(PREC, "4")
+  field(ADEL, "1")
+}

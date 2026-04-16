@@ -1,0 +1,189 @@
+# % macro, __doc__, Template to read an ID potentiometer tilt 
+# % macro, prefix, device prefix, e.g. SR02K-MO
+# % macro, port, port name of ether_ip driver
+
+record(ai, "$(prefix)-TILT-01:DER:MRADS"){
+  field(DESC, "Tilt pot upper derived (mrads)")
+  field(EGU, "mrads")
+  field(PREC, "4")
+  field(ADEL, "0.005")
+  field(MDEL, "0.0010")
+  field(DTYP, "EtherIP")
+  field(SCAN, ".1 second")
+  field(INP,  "@$(port) PT.Measured[1]")
+}
+record(ai, "$(prefix)-TILT-02:DER:MRADS"){
+  field(DESC, "Tilt pot lower derived (mrads)")
+  field(EGU, "mrads")
+  field(PREC, "4")
+  field(ADEL, "0.005")
+  field(MDEL, "0.0010")
+  field(DTYP, "EtherIP")
+  field(SCAN, ".1 second")
+  field(INP,  "@$(port) PT.Measured[2]")
+}
+
+record(ai, "$(prefix)-STAT-01:DERSAFE") {
+  field(DESC, "Tilt pot safe window")
+  field(DTYP, "EtherIP")
+  field(SCAN, "1 second")
+  field(INP, "@$(port) PT.Safe_Window[1]")
+}
+record(ai, "$(prefix)-STAT-01:DERABS") {
+  field(DESC, "Tilt pot absolute window")
+  field(DTYP, "EtherIP")
+  field(SCAN, "1 second")
+  field(INP, "@$(port) T.Absolute_Window[1]")
+}
+record(ai, "$(prefix)-STAT-01:DEREXTR") {
+  field(DESC, "Tilt pot extreme window")
+  field(DTYP, "EtherIP")
+  field(SCAN, "1 second")
+  field(INP, "@$(port) T.Extreme_Window[1]")
+}
+
+record(ai, "$(prefix)-TILT-01:DERSTA:INP") {
+  field(DESC, "Tilt pot upper window status")
+  field(DTYP, "EtherIP")
+  field(INP, "@$(port) PT.Window[1]")
+  field(SCAN, ".2 second")
+  field(FLNK, "$(prefix)-TILT-01:DERSTA")
+}
+
+record(ai, "$(prefix)-TILT-02:DERSTA:INP") {
+  field(DESC, "Tilt pot lower window status")
+  field(DTYP, "EtherIP")
+  field(INP, "@$(port) PT.Window[2]")
+  field(SCAN, ".2 second")
+  field(FLNK, "$(prefix)-TILT-02:DERSTA")
+}
+
+# tilt window status
+#
+# % archiver 10 Monitor
+record(mbbi, "$(prefix)-TILT-01:DERSTA") {
+  field(DESC, "Tilt pot upper Window Status")
+  field(DTYP, "Soft Channel")
+  field(ZRST, "In Safe Window")
+  field(ONST, "In Absolute Window")
+  field(TWST, "In Extreme Window")
+  field(ZRVL, "1")
+  field(ONVL, "2")
+  field(TWVL, "4")
+  field(ZRSV, "NO_ALARM")
+  field(ONSV, "MAJOR")
+  field(TWSV, "MAJOR")
+  field(THSV, "INVALID")
+  field(FRSV, "INVALID")
+  field(FVSV, "INVALID")
+  field(SXSV, "INVALID")
+  field(SVSV, "INVALID")
+  field(EISV, "INVALID")
+  field(NISV, "INVALID")
+  field(TESV, "INVALID")
+  field(ELSV, "INVALID")
+  field(TVSV, "INVALID")
+  field(TTSV, "INVALID")
+  field(FTSV, "INVALID")
+  field(FFSV, "INVALID")
+  field(NOBT, "3")
+  field(INP, "$(prefix)-TILT-01:DERSTA:INP")
+}
+# % archiver 10 Monitor
+record(mbbi, "$(prefix)-TILT-02:DERSTA") {
+  field(DESC, "Tilt pot lower Window status")
+  field(DTYP, "Soft Channel")
+  field(ZRST, "In Safe Window")
+  field(ONST, "In Absolute Window")
+  field(TWST, "In Extreme Window")
+  field(ZRVL, "1")
+  field(ONVL, "2")
+  field(TWVL, "4")
+  field(ZRSV, "NO_ALARM")
+  field(ONSV, "MAJOR")
+  field(TWSV, "MAJOR")
+  field(THSV, "INVALID")
+  field(FRSV, "INVALID")
+  field(FVSV, "INVALID")
+  field(SXSV, "INVALID")
+  field(SVSV, "INVALID")
+  field(EISV, "INVALID")
+  field(NISV, "INVALID")
+  field(TESV, "INVALID")
+  field(ELSV, "INVALID")
+  field(TVSV, "INVALID")
+  field(TTSV, "INVALID")
+  field(FTSV, "INVALID")
+  field(FFSV, "INVALID")
+  field(NOBT, "3")
+  field(INP, "$(prefix)-TILT-02:DERSTA:INP")
+}
+
+record(ao, "$(prefix)-ORIDE-01:DERSAFE"){
+  field(DESC, "Tilt pot upper safe window O/R")
+  field(SCAN, "Passive")
+  field(DTYP, "Soft Channel")
+  field(OUT, "$(prefix)-ORIDE-01:DER:WR")
+  field(DOL, "1")
+  field(OMSL, "closed_loop")
+  field(DRVH, "2")
+}
+record(ao, "$(prefix)-ORIDE-01:DERABS"){
+  field(DESC, "Tilt pot upper absolute window O/R")
+  field(SCAN, "Passive")
+  field(DTYP, "Soft Channel")
+  field(OUT, "$(prefix)-ORIDE-01:DER:WR")
+  field(DOL, "2")
+  field(OMSL, "closed_loop")
+  field(DRVH, "2")
+}
+record(ao, "$(prefix)-ORIDE-01:DER:WR") {
+  field(DESC, "Write to PLC")
+  field(SCAN, "Passive")
+  field(DTYP, "EtherIP")
+  field(OUT, "@$(port) PT.Ovr_Window[1] S 1")
+}
+record(ao, "$(prefix)-ORIDE-02:DERSAFE"){
+  field(DESC, "Tilt pot lower safe window O/R")
+  field(SCAN, "Passive")
+  field(DTYP, "Soft Channel")
+  field(OUT, "$(prefix)-ORIDE-02:DER:WR")
+  field(DOL, "1")
+  field(OMSL, "closed_loop")
+  field(DRVH, "2")
+}
+record(ao, "$(prefix)-ORIDE-02:DERABS"){
+  field(DESC, "Tilt pot lower absolute window O/R")
+  field(SCAN, "Passive")
+  field(DTYP, "Soft Channel")
+  field(OUT, "$(prefix)-ORIDE-02:DER:WR")
+  field(DOL, "2")
+  field(OMSL, "closed_loop")
+  field(DRVH, "2")
+}
+record(ao, "$(prefix)-ORIDE-02:DER:WR") {
+  field(DESC, "Write to PLC")
+  field(SCAN, "Passive")
+  field(DTYP, "EtherIP")
+  field(OUT, "@$(port) PT.Ovr_Window[2] S 1")
+}
+
+# GSF
+record(ai, "$(prefix)-STAT-01:ENCDIST"){
+  field(DTYP, "EtherIP")
+  field(SCAN, "1 second")
+  field(INP, "@$(port) PT.GSF[1]")
+  field(FLNK, "$(prefix)-STAT-01:BMLENGTH")
+}
+
+# Dummy record with arbitrary 40 mm added
+# This is not implemented in plc code for collision protection.
+# The original idea had to do with protection against clashes for beams
+# far away from the encoder distance (large overhang) that could
+# potentially clash.
+record(calc, "$(prefix)-STAT-01:BMLENGTH") {
+  field(DESC, "Magnet array beam length")
+  field(CALC, "A+40")
+  field(EGU, "mm")
+  field(INPA, "$(prefix)-STAT-01:ENCDIST")
+}

@@ -18,11 +18,12 @@ include $(TOP)/configure/CONFIG
 # In a Diamond IOC Application, build db files from
 # template files like this
 #
-#DB += BL06I-MO-IOC-01.db
-#DB += BL06I-MO-IOC-01_sim.db
-
-#USES_TEMPLATE += $(MOTOR)/db/motor.template
-#USES_TEMPLATE += $(MOTOR)/db/basic_motor.template
+DB += NX102_tilt.template
+DB += NX102_tiltpot.template
+DB += NX102_axisexp.template
+DB += NX102_id.template
+DB += NX102_idoverrides.template
+DB += NX102_idpotscan.template
 
 include $(TOP)/configure/RULES
 #----------------------------------------
