@@ -4,7 +4,8 @@
 # % macro, name, gui component name
 # % macro, idname, gui label
 
-# % gui, $(name), edm, NX102_idInterlocks.edl, prefix=$(prefix),idname=$(idname)
+# % gui, $(name), edm, idplc_Interlocks.edl, prefix=$(prefix),idname=$(idname)
+# % gui, $(name), edm, idplc_Health.edl, prefix=$(prefix)
 
 # % archiver 10.0 Monitor
 record(ai, "$(prefix)-PLC-01:GAP") {
@@ -49,6 +50,38 @@ record(ao, "$(prefix)-PLC-01:OUT:D104") {
   field(DTYP, "EtherIP")
   field(OUT, "@pport Reset_Motion_Stop S 1")
 }
+
+record(bo, "$(prefix)-IOC-01:HEALTH") {
+  field(DESC, "IOC Healthy")
+  field(SCAN, "Passive")
+  field(DTYP, "Soft Channel")
+  field(ZNAM, "Fail")
+  field(ONAM, "IOC Healthy")
+  field(ZSV, "MAJOR")
+  field(OSV, "NO_ALARM")
+  field(COSV, "NO_ALARM")
+  field(FLNK, "$(prefix)-IOC-01:HEPLC")
+  field(PINI, "YES")
+  field(VAL, "1")
+}
+
+record(ao, "$(prefix)-IOC-01:HEPLC") {
+  field(DESC, "Trigger Motion Stop")
+  field(SCAN, "Passive")
+  field(DTYP, "Soft Channel")
+  field(OUT, "$(prefix)-PLC-01:OUT:STOP PP")
+  field(DOL, "1")
+  field(OMSL, "closed_loop")
+  field(DRVH, "1")
+}
+
+record(ao, "$(prefix)-PLC-01:OUT:STOP") {
+  field(DESC, "Write to control value on PLC")
+  field(SCAN, "Passive")
+  field(DTYP, "EtherIP")
+  field(OUT, "@pport Motion_Stop_Request S 1")
+}
+
 
 # encoder power request
 record(bo, "$(prefix)-STAT-01:ENCPWR") {
