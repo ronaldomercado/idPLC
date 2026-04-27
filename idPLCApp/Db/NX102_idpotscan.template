@@ -4,7 +4,7 @@
 # % macro, axx, axis, e.g. 1
 # % macro, port, port name of ether_ip driver
 
-# % gui, $(name), edm, NX102_idpotscan.edl, prefix=$(prefix),axx=$(axx)
+# % gui, $(name), edm, idplc_PotScan.edl, prefix=$(prefix),axx=$(axx)
 
 record(ao, "$(prefix)-AXIS-0$(axx):PS:INDEX"){
   field(DTYP, "EtherIP")
