@@ -26,7 +26,7 @@ include $(TOP)/configure/CONFIG
 # Build an IOC Application
 # ------------------------
 
-PROD_IOC = idPLC
+#PROD_IOC = idPLC
 
 # idPLC.dbd will be installed into <top>/dbd
 DBD += idPLC.dbd
