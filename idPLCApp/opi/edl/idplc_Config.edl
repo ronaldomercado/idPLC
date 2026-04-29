@@ -58,7 +58,7 @@ fontAlign "center"
 fgColor index 14
 bgColor index 63
 value {
-  "DLS ID PLC Configuration    ($(prefix))   ID   $(idname) "
+  "DLS ID PLC Configuration    ($(prefix)-)   ID   $(idname) "
 }
 endObjectProperties
 
@@ -159,7 +159,7 @@ x 16
 y 64
 w 100
 h 16
-controlPv "$(prefix)PLC-01:GAP"
+controlPv "$(prefix)-PLC-01:GAP"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -267,7 +267,7 @@ x 16
 y 120
 w 100
 h 16
-controlPv "$(prefix)PLC-01:OFFSET"
+controlPv "$(prefix)-PLC-01:OFFSET"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -375,7 +375,7 @@ x 16
 y 176
 w 100
 h 16
-controlPv "$(prefix)PLC-01:TAPER"
+controlPv "$(prefix)-PLC-01:TAPER"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -486,7 +486,7 @@ x 288
 y 144
 w 100
 h 16
-controlPv "$(prefix)AXIS-02:RAW"
+controlPv "$(prefix)-AXIS-02:RAW"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -510,7 +510,7 @@ x 184
 y 144
 w 100
 h 16
-controlPv "$(prefix)AXIS-01:RAW"
+controlPv "$(prefix)-AXIS-01:RAW"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -572,7 +572,7 @@ x 184
 y 168
 w 100
 h 16
-controlPv "$(prefix)AXIS-01:POS"
+controlPv "$(prefix)-AXIS-01:POS"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -596,7 +596,7 @@ x 288
 y 168
 w 100
 h 16
-controlPv "$(prefix)AXIS-02:POS"
+controlPv "$(prefix)-AXIS-02:POS"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -681,7 +681,7 @@ x 184
 y 192
 w 100
 h 16
-controlPv "$(prefix)AXIS-01:ENCD"
+controlPv "$(prefix)-AXIS-01:ENCD"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -705,7 +705,7 @@ x 288
 y 192
 w 100
 h 16
-controlPv "$(prefix)AXIS-02:ENCD"
+controlPv "$(prefix)-AXIS-02:ENCD"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -748,7 +748,7 @@ x 288
 y 120
 w 100
 h 16
-controlPv "$(prefix)AXIS-02:OFF"
+controlPv "$(prefix)-AXIS-02:OFF"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -772,7 +772,7 @@ x 184
 y 120
 w 100
 h 16
-controlPv "$(prefix)AXIS-01:OFF"
+controlPv "$(prefix)-AXIS-01:OFF"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -796,7 +796,7 @@ x 184
 y 96
 w 96
 h 16
-controlPv "$(prefix)AXIS-01:OUT:OFF"
+controlPv "$(prefix)-AXIS-01:OUT:OFF"
 precision 4
 fgColor index 14
 fgAlarm
@@ -815,7 +815,7 @@ x 288
 y 96
 w 96
 h 16
-controlPv "$(prefix)AXIS-02:OUT:OFF"
+controlPv "$(prefix)-AXIS-02:OUT:OFF"
 precision 4
 fgColor index 14
 fgAlarm
@@ -853,7 +853,7 @@ x 496
 y 144
 w 100
 h 16
-controlPv "$(prefix)AXIS-04:RAW"
+controlPv "$(prefix)-AXIS-04:RAW"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -877,7 +877,7 @@ x 392
 y 144
 w 100
 h 16
-controlPv "$(prefix)AXIS-03:RAW"
+controlPv "$(prefix)-AXIS-03:RAW"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -901,7 +901,7 @@ x 392
 y 168
 w 100
 h 16
-controlPv "$(prefix)AXIS-03:POS"
+controlPv "$(prefix)-AXIS-03:POS"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -925,7 +925,7 @@ x 496
 y 168
 w 100
 h 16
-controlPv "$(prefix)AXIS-04:POS"
+controlPv "$(prefix)-AXIS-04:POS"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -949,7 +949,7 @@ x 392
 y 192
 w 100
 h 16
-controlPv "$(prefix)AXIS-03:ENCD"
+controlPv "$(prefix)-AXIS-03:ENCD"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -973,7 +973,7 @@ x 496
 y 192
 w 100
 h 16
-controlPv "$(prefix)AXIS-04:ENCD"
+controlPv "$(prefix)-AXIS-04:ENCD"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -997,7 +997,7 @@ x 496
 y 120
 w 100
 h 16
-controlPv "$(prefix)AXIS-04:OFF"
+controlPv "$(prefix)-AXIS-04:OFF"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -1021,7 +1021,7 @@ x 392
 y 120
 w 100
 h 16
-controlPv "$(prefix)AXIS-03:OFF"
+controlPv "$(prefix)-AXIS-03:OFF"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -1045,7 +1045,7 @@ x 392
 y 96
 w 96
 h 16
-controlPv "$(prefix)AXIS-03:OUT:OFF"
+controlPv "$(prefix)-AXIS-03:OUT:OFF"
 precision 4
 fgColor index 14
 fgAlarm
@@ -1064,7 +1064,7 @@ x 496
 y 96
 w 96
 h 16
-controlPv "$(prefix)AXIS-04:OUT:OFF"
+controlPv "$(prefix)-AXIS-04:OUT:OFF"
 precision 4
 fgColor index 14
 fgAlarm
@@ -1173,7 +1173,7 @@ x 192
 y 264
 w 96
 h 16
-controlPv "$(prefix)AXIS-01:NSLIM"
+controlPv "$(prefix)-AXIS-01:NSLIM"
 precision 4
 fgColor index 16
 fgAlarm
@@ -1194,7 +1194,7 @@ x 96
 y 264
 w 96
 h 16
-controlPv "$(prefix)AXIS-01:OUT:NSLIM"
+controlPv "$(prefix)-AXIS-01:OUT:NSLIM"
 precision 4
 fgColor index 14
 fgAlarm
@@ -1253,7 +1253,7 @@ x 408
 y 264
 w 96
 h 16
-controlPv "$(prefix)AXIS-01:PSLIM"
+controlPv "$(prefix)-AXIS-01:PSLIM"
 precision 4
 fgColor index 16
 fgAlarm
@@ -1274,7 +1274,7 @@ x 312
 y 264
 w 96
 h 16
-controlPv "$(prefix)AXIS-01:OUT:PSLIM"
+controlPv "$(prefix)-AXIS-01:OUT:PSLIM"
 precision 4
 fgColor index 14
 fgAlarm
@@ -1313,7 +1313,7 @@ x 408
 y 288
 w 96
 h 16
-controlPv "$(prefix)AXIS-02:PSLIM"
+controlPv "$(prefix)-AXIS-02:PSLIM"
 precision 4
 fgColor index 16
 fgAlarm
@@ -1334,7 +1334,7 @@ x 312
 y 288
 w 96
 h 16
-controlPv "$(prefix)AXIS-02:OUT:PSLIM"
+controlPv "$(prefix)-AXIS-02:OUT:PSLIM"
 precision 4
 fgColor index 14
 fgAlarm
@@ -1353,7 +1353,7 @@ x 192
 y 288
 w 96
 h 16
-controlPv "$(prefix)AXIS-02:NSLIM"
+controlPv "$(prefix)-AXIS-02:NSLIM"
 precision 4
 fgColor index 16
 fgAlarm
@@ -1374,7 +1374,7 @@ x 96
 y 288
 w 96
 h 16
-controlPv "$(prefix)AXIS-02:OUT:NSLIM"
+controlPv "$(prefix)-AXIS-02:OUT:NSLIM"
 precision 4
 fgColor index 14
 fgAlarm
@@ -1413,7 +1413,7 @@ x 192
 y 312
 w 96
 h 16
-controlPv "$(prefix)AXIS-03:NSLIM"
+controlPv "$(prefix)-AXIS-03:NSLIM"
 precision 4
 fgColor index 16
 fgAlarm
@@ -1434,7 +1434,7 @@ x 96
 y 312
 w 96
 h 16
-controlPv "$(prefix)AXIS-03:OUT:NSLIM"
+controlPv "$(prefix)-AXIS-03:OUT:NSLIM"
 precision 4
 fgColor index 14
 fgAlarm
@@ -1473,7 +1473,7 @@ x 408
 y 312
 w 96
 h 16
-controlPv "$(prefix)AXIS-03:PSLIM"
+controlPv "$(prefix)-AXIS-03:PSLIM"
 precision 4
 fgColor index 16
 fgAlarm
@@ -1494,7 +1494,7 @@ x 312
 y 312
 w 96
 h 16
-controlPv "$(prefix)AXIS-03:OUT:PSLIM"
+controlPv "$(prefix)-AXIS-03:OUT:PSLIM"
 precision 4
 fgColor index 14
 fgAlarm
@@ -1513,7 +1513,7 @@ x 408
 y 336
 w 96
 h 16
-controlPv "$(prefix)AXIS-04:PSLIM"
+controlPv "$(prefix)-AXIS-04:PSLIM"
 precision 4
 fgColor index 16
 fgAlarm
@@ -1534,7 +1534,7 @@ x 312
 y 336
 w 96
 h 16
-controlPv "$(prefix)AXIS-04:OUT:PSLIM"
+controlPv "$(prefix)-AXIS-04:OUT:PSLIM"
 precision 4
 fgColor index 14
 fgAlarm
@@ -1553,7 +1553,7 @@ x 192
 y 336
 w 96
 h 16
-controlPv "$(prefix)AXIS-04:NSLIM"
+controlPv "$(prefix)-AXIS-04:NSLIM"
 precision 4
 fgColor index 16
 fgAlarm
@@ -1574,7 +1574,7 @@ x 96
 y 336
 w 96
 h 16
-controlPv "$(prefix)AXIS-04:OUT:NSLIM"
+controlPv "$(prefix)-AXIS-04:OUT:NSLIM"
 precision 4
 fgColor index 14
 fgAlarm
@@ -1675,7 +1675,7 @@ x 544
 y 272
 w 64
 h 16
-controlPv "$(prefix)PLC-01:OUT:COUNT"
+controlPv "$(prefix)-PLC-01:OUT:COUNT"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -1719,7 +1719,7 @@ x 544
 y 304
 w 64
 h 16
-controlPv "$(prefix)PLC-01:COUNTRBK"
+controlPv "$(prefix)-PLC-01:COUNTRBK"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -1763,7 +1763,7 @@ x 544
 y 336
 w 64
 h 16
-controlPv "$(prefix)PLC-01:COUNT"
+controlPv "$(prefix)-PLC-01:COUNT"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -1885,7 +1885,7 @@ x 376
 y 400
 w 100
 h 16
-controlPv "$(prefix)STAT-01:ENCDIST"
+controlPv "$(prefix)-STAT-01:ENCDIST"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -1909,7 +1909,7 @@ x 376
 y 424
 w 100
 h 16
-controlPv "$(prefix)STAT-01:BMLENGTH"
+controlPv "$(prefix)-STAT-01:BMLENGTH"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -2007,7 +2007,7 @@ x 376
 y 552
 w 100
 h 16
-controlPv "$(prefix)STAT-01:TILTEXTR"
+controlPv "$(prefix)-STAT-01:TILTEXTR"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -2031,7 +2031,7 @@ x 376
 y 528
 w 100
 h 16
-controlPv "$(prefix)STAT-01:TILTABS"
+controlPv "$(prefix)-STAT-01:TILTABS"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -2093,7 +2093,7 @@ x 376
 y 504
 w 100
 h 16
-controlPv "$(prefix)STAT-01:TILTSAFE"
+controlPv "$(prefix)-STAT-01:TILTSAFE"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -2249,7 +2249,7 @@ x 16
 y 480
 w 100
 h 16
-controlPv "$(prefix)TILT-01:RAW"
+controlPv "$(prefix)-TILT-01:RAW"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -2311,7 +2311,7 @@ x 16
 y 456
 w 100
 h 16
-controlPv "$(prefix)TILT-01:DER"
+controlPv "$(prefix)-TILT-01:DER"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -2354,7 +2354,7 @@ x 16
 y 504
 w 100
 h 16
-controlPv "$(prefix)TILT-01:TILT"
+controlPv "$(prefix)-TILT-01:TILT"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -2378,7 +2378,7 @@ x 16
 y 528
 w 100
 h 16
-controlPv "$(prefix)TILT-01:MRADS"
+controlPv "$(prefix)-TILT-01:MRADS"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -2402,7 +2402,7 @@ x 16
 y 552
 w 100
 h 16
-controlPv "$(prefix)TILT-01:TEMP"
+controlPv "$(prefix)-TILT-01:TEMP"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -2445,7 +2445,7 @@ x 16
 y 408
 w 96
 h 16
-controlPv "$(prefix)TILT-01:OUT:UOFF"
+controlPv "$(prefix)-TILT-01:OUT:UOFF"
 precision 4
 fgColor index 14
 fgAlarm
@@ -2483,7 +2483,7 @@ x 16
 y 432
 w 100
 h 16
-controlPv "$(prefix)TILT-01:UOFF"
+controlPv "$(prefix)-TILT-01:UOFF"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -2507,7 +2507,7 @@ x 120
 y 552
 w 100
 h 16
-controlPv "$(prefix)TILT-02:TEMP"
+controlPv "$(prefix)-TILT-02:TEMP"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -2531,7 +2531,7 @@ x 120
 y 528
 w 100
 h 16
-controlPv "$(prefix)TILT-02:MRADS"
+controlPv "$(prefix)-TILT-02:MRADS"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -2555,7 +2555,7 @@ x 120
 y 504
 w 100
 h 16
-controlPv "$(prefix)TILT-02:TILT"
+controlPv "$(prefix)-TILT-02:TILT"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -2579,7 +2579,7 @@ x 120
 y 456
 w 100
 h 16
-controlPv "$(prefix)TILT-02:DER"
+controlPv "$(prefix)-TILT-02:DER"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -2603,7 +2603,7 @@ x 120
 y 480
 w 100
 h 16
-controlPv "$(prefix)TILT-02:RAW"
+controlPv "$(prefix)-TILT-02:RAW"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -2627,7 +2627,7 @@ x 120
 y 432
 w 100
 h 16
-controlPv "$(prefix)TILT-02:LOFF"
+controlPv "$(prefix)-TILT-02:LOFF"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -2651,7 +2651,7 @@ x 120
 y 408
 w 96
 h 16
-controlPv "$(prefix)TILT-02:OUT:LOFF"
+controlPv "$(prefix)-TILT-02:OUT:LOFF"
 precision 4
 fgColor index 14
 fgAlarm

@@ -6,7 +6,7 @@
 
 # % gui, $(name), edm, idplc_Config.edl, prefix=$(prefix),idname=$(idname)
 
-record(ao, "$(prefix)TILT-01:OUT:UOFF"){
+record(ao, "$(prefix)-TILT-01:OUT:UOFF"){
     field(DESC, "Tilt upper offset write")
     field(DTYP, "EtherIP")
     field(SCAN, "Passive")
@@ -14,7 +14,7 @@ record(ao, "$(prefix)TILT-01:OUT:UOFF"){
     field(DRVL, "-1000")
     field(OUT,  "@$(port) T.Offset[1] S 0.5")
 }
-record(ai, "$(prefix)TILT-01:UOFF"){
+record(ai, "$(prefix)-TILT-01:UOFF"){
     field(DESC, "Tilt upper offset")
     field(DTYP, "EtherIP")
     field(INP,  "@$(port) T.Offset_RB[1]")
@@ -23,7 +23,7 @@ record(ai, "$(prefix)TILT-01:UOFF"){
     field(PREC, "2")
 }
 
-record(ao, "$(prefix)TILT-02:OUT:LOFF"){
+record(ao, "$(prefix)-TILT-02:OUT:LOFF"){
     field(DESC, "Tilt lower offset write")
     field(DTYP, "EtherIP")
     field(SCAN, "Passive")
@@ -31,7 +31,7 @@ record(ao, "$(prefix)TILT-02:OUT:LOFF"){
     field(DRVL, "-1000")
     field(OUT,  "@$(port) T.Offset[2] S 0.5")
 }
-record(ai, "$(prefix)TILT-02:LOFF"){
+record(ai, "$(prefix)-TILT-02:LOFF"){
     field(DESC, "Tilt lower offset")
     field(DTYP, "EtherIP")
     field(INP,  "@$(port) T.Offset_RB[2]")
@@ -39,76 +39,76 @@ record(ai, "$(prefix)TILT-02:LOFF"){
     field(EGU, "urad")
 }
 
-record(ai, "$(prefix)TILT-01:TILT"){
+record(ai, "$(prefix)-TILT-01:TILT"){
     field(DESC, "Tilt sensor upper")
     field(DTYP, "EtherIP")
     field(SCAN, ".1 second")
     field(INP,  "@$(port) T.Measured[1]")
-    field(FLNK, "$(prefix)TILT-01:MRADS")
+    field(FLNK, "$(prefix)-TILT-01:MRADS")
 }
-record(ai, "$(prefix)TILT-01:MRADS"){
+record(ai, "$(prefix)-TILT-01:MRADS"){
   field(DESC, "Tilt sensor upper (mrads)")
-  field(INP, "$(prefix)TILT-01:TILT")
+  field(INP, "$(prefix)-TILT-01:TILT")
   field(EGU, "mrads")
   field(PREC, "4")
   field(ADEL, "0.005")
   field(MDEL, "0.0010")
 }
-record(ai, "$(prefix)TILT-02:TILT"){
+record(ai, "$(prefix)-TILT-02:TILT"){
     field(DESC, "Tilt sensor lower")
     field(DTYP, "EtherIP")
     field(SCAN, ".1 second")
     field(INP,  "@$(port) T.Measured[2]")
-    field(FLNK, "$(prefix)TILT-02:MRADS")    
+    field(FLNK, "$(prefix)-TILT-02:MRADS")    
 }
-record(ai, "$(prefix)TILT-02:MRADS") {
+record(ai, "$(prefix)-TILT-02:MRADS") {
   field(DESC, "Tilt sensor lower (mrads)")
-  field(INP, "$(prefix)TILT-02:TILT")
+  field(INP, "$(prefix)-TILT-02:TILT")
   field(EGU, "mrads")
   field(PREC, "4")
   field(ADEL, "0.005")
   field(MDEL, "0.0010")
 }
 
-record(ai, "$(prefix)STAT-01:TILTSAFE") {
+record(ai, "$(prefix)-STAT-01:TILTSAFE") {
   field(DESC, "Tilt safe window")
   field(DTYP, "EtherIP")
   field(SCAN, "1 second")
   field(INP, "@$(port) T.Safe_Window[1]")
 }
-record(ai, "$(prefix)STAT-01:TILTABS") {
+record(ai, "$(prefix)-STAT-01:TILTABS") {
   field(DESC, "Tilt absolute window")
   field(DTYP, "EtherIP")
   field(SCAN, "1 second")
   field(INP, "@$(port) T.Absolute_Window[1]")
 }
-record(ai, "$(prefix)STAT-01:TILTEXTR") {
+record(ai, "$(prefix)-STAT-01:TILTEXTR") {
   field(DESC, "Tilt extreme window")
   field(DTYP, "EtherIP")
   field(SCAN, "1 second")
   field(INP, "@$(port) T.Extreme_Window[1]")
 }
 
-record(ai, "$(prefix)TILT-01:STA:INP") {
+record(ai, "$(prefix)-TILT-01:STA:INP") {
   field(DESC, "Tilt upper window status")
   field(DTYP, "EtherIP")
   field(INP, "@$(port) T.Window[1]")
   field(SCAN, ".2 second")
-  field(FLNK, "$(prefix)TILT-01:STA")
+  field(FLNK, "$(prefix)-TILT-01:STA")
 }
 
-record(ai, "$(prefix)TILT-02:STA:INP") {
+record(ai, "$(prefix)-TILT-02:STA:INP") {
   field(DESC, "Tilt lower window status")
   field(DTYP, "EtherIP")
   field(INP, "@$(port) T.Window[2]")
   field(SCAN, ".2 second")
-  field(FLNK, "$(prefix)TILT-02:STA")
+  field(FLNK, "$(prefix)-TILT-02:STA")
 }
 
 # tilt window status
 #
 # % archiver 10 Monitor
-record(mbbi, "$(prefix)TILT-01:STA") {
+record(mbbi, "$(prefix)-TILT-01:STA") {
   field(DESC, "Tilt Upper Window Status")
   field(DTYP, "Soft Channel")
   field(ZRST, "In Safe Window")
@@ -134,10 +134,10 @@ record(mbbi, "$(prefix)TILT-01:STA") {
   field(FTSV, "INVALID")
   field(FFSV, "INVALID")
   field(NOBT, "3")
-  field(INP, "$(prefix)TILT-01:STA:INP")
+  field(INP, "$(prefix)-TILT-01:STA:INP")
 }
 # % archiver 10 Monitor
-record(mbbi, "$(prefix)TILT-02:STA") {
+record(mbbi, "$(prefix)-TILT-02:STA") {
   field(DESC, "Tilt Lower Window Status")
   field(DTYP, "Soft Channel")
   field(ZRST, "In Safe Window")
@@ -163,60 +163,60 @@ record(mbbi, "$(prefix)TILT-02:STA") {
   field(FTSV, "INVALID")
   field(FFSV, "INVALID")
   field(NOBT, "3")
-  field(INP, "$(prefix)TILT-02:STA:INP")
+  field(INP, "$(prefix)-TILT-02:STA:INP")
 }
 
-record(ao, "$(prefix)ORIDE-01:TILTSAFE"){
+record(ao, "$(prefix)-ORIDE-01:TILTSAFE"){
   field(DESC, "Tilt upper safe window O/R")
   field(SCAN, "Passive")
   field(DTYP, "Soft Channel")
-  field(OUT, "$(prefix)ORIDE-01:WR")
+  field(OUT, "$(prefix)-ORIDE-01:WR")
   field(DOL, "1")
   field(OMSL, "closed_loop")
   field(DRVH, "2")
 }
-record(ao, "$(prefix)ORIDE-01:TILTABS"){
+record(ao, "$(prefix)-ORIDE-01:TILTABS"){
   field(DESC, "Tilt upper absolute window O/R")
   field(SCAN, "Passive")
   field(DTYP, "Soft Channel")
-  field(OUT, "$(prefix)ORIDE-01:WR")
+  field(OUT, "$(prefix)-ORIDE-01:WR")
   field(DOL, "2")
   field(OMSL, "closed_loop")
   field(DRVH, "2")
 }
-record(ao, "$(prefix)ORIDE-01:WR") {
+record(ao, "$(prefix)-ORIDE-01:WR") {
   field(DESC, "Write to control value on PLC")
   field(SCAN, "Passive")
   field(DTYP, "EtherIP")
   field(OUT, "@$(port) T.Ovr_Window[1] S 1")
 }
 
-record(ao, "$(prefix)ORIDE-02:TILTSAFE"){
+record(ao, "$(prefix)-ORIDE-02:TILTSAFE"){
   field(DESC, "Tilt lower safe window O/R")
   field(SCAN, "Passive")
   field(DTYP, "Soft Channel")
-  field(OUT, "$(prefix)ORIDE-02:WR")
+  field(OUT, "$(prefix)-ORIDE-02:WR")
   field(DOL, "1")
   field(OMSL, "closed_loop")
   field(DRVH, "2")
 }
-record(ao, "$(prefix)ORIDE-02:TILTABS"){
+record(ao, "$(prefix)-ORIDE-02:TILTABS"){
   field(DESC, "Tilt lower absolute window O/R")
   field(SCAN, "Passive")
   field(DTYP, "Soft Channel")
-  field(OUT, "$(prefix)ORIDE-02:WR")
+  field(OUT, "$(prefix)-ORIDE-02:WR")
   field(DOL, "2")
   field(OMSL, "closed_loop")
   field(DRVH, "2")
 }
-record(ao, "$(prefix)ORIDE-02:WR") {
+record(ao, "$(prefix)-ORIDE-02:WR") {
   field(DESC, "Write to PLC")
   field(SCAN, "Passive")
   field(DTYP, "EtherIP")
   field(OUT, "@$(port) T.Ovr_Window[2] S 1")
 }
 # tilt sensor temperature
-record(ai, "$(prefix)TILT-01:TEMP") {
+record(ai, "$(prefix)-TILT-01:TEMP") {
   field(DTYP, "EtherIP")
   field(DESC, "Tilt temperature upper (degC)")
   field(INP, "@$(port) T.Temperature[1]")
@@ -226,7 +226,7 @@ record(ai, "$(prefix)TILT-01:TEMP") {
   field(MDEL, "0.15")
   field(SCAN, "1 second")
 }
-record(ai, "$(prefix)TILT-02:TEMP") {
+record(ai, "$(prefix)-TILT-02:TEMP") {
   field(DTYP, "EtherIP")
   field(DESC, "Tilt temperature lower (degC)")
   field(INP, "@$(port) T.Temperature[2]")

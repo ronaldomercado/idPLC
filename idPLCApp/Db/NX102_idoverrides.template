@@ -2,17 +2,17 @@
 # System_Recovery_Request
 # Recovery_Mode_RB
 
-record(ao, "TS99K-MO-ORIDE-01:MODE:D103") {
+record(ao, "$(prefix)-ORIDE-01:MODE:D103") {
   field(DESC, "Enable PLC overrides")
   field(SCAN, "Passive")
   field(DTYP, "Soft Channel")
-  field(OUT, "TS99K-MO-ORIDE-01:OUT:D103 PP")
+  field(OUT, "$(prefix)-ORIDE-01:OUT:D103 PP")
   field(DOL, "1")
   field(OMSL, "closed_loop")
   field(DRVH, "2")
 }
 
-record(ao, "TS99K-MO-ORIDE-01:OUT:D103") {
+record(ao, "$(prefix)-ORIDE-01:OUT:D103") {
   field(DESC, "Write to control value on PLC")
   field(SCAN, "Passive")
   field(DTYP, "EtherIP")
@@ -21,7 +21,7 @@ record(ao, "TS99K-MO-ORIDE-01:OUT:D103") {
 
 # PLC override state
 # % archiver 10.0 Monitor
-record(bi, "TS99K-MO-PLC-01:ENAOR") {
+record(bi, "$(prefix)-PLC-01:ENAOR") {
   field(DESC, "Overriden enable state")
   field(DTYP, "EtherIP")
   field(SCAN, "1 second")
