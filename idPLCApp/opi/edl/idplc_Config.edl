@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 1095
-y 152
+x 832
+y 189
 w 704
 h 584
 font "arial-medium-r-12.0"
@@ -1801,19 +1801,6 @@ endGroup
 
 endObjectProperties
 
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 8
-y 368
-w 560
-h 208
-
-beginGroup
-
 # (Rectangle)
 object activeRectangleClass
 beginObjectProperties
@@ -2148,19 +2135,6 @@ bgColor index 0
 useDisplayBg
 endObjectProperties
 
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 16
-y 384
-w 352
-h 184
-
-beginGroup
-
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
@@ -2311,7 +2285,7 @@ x 16
 y 456
 w 100
 h 16
-controlPv "$(prefix)-TILT-01:DER"
+controlPv "$(prefix)-TILT-01:DER:MRADS"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -2579,7 +2553,7 @@ x 120
 y 456
 w 100
 h 16
-controlPv "$(prefix)-TILT-02:DER"
+controlPv "$(prefix)-TILT-02:DER:MRADS"
 format "decimal"
 font "arial-medium-r-14.0"
 fontAlign "center"
@@ -2658,13 +2632,5 @@ fgAlarm
 bgColor index 3
 fill
 font "arial-medium-r-12.0"
-endObjectProperties
-
-endGroup
-
-endObjectProperties
-
-endGroup
-
 endObjectProperties
 
