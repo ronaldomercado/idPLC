@@ -6,6 +6,7 @@
 
 # % gui, $(name), edm, idplc_Interlocks.edl, prefix=$(prefix),idname=$(idname)
 # % gui, $(name)0, edmembed, idplc_Health-embed.edl, prefix=$(prefix)
+# % gui, $(name)1, edmembed, idplc_EncPower-embed.edl, prefix=$(prefix)
 
 # % archiver 10.0 Monitor
 record(ai, "$(prefix)-PLC-01:GAP") {
