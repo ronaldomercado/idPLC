@@ -89,7 +89,7 @@ record(bo, "$(prefix)-STAT-01:ENCPWR") {
   field(DESC, "Power-cycle encoders")
   field(SCAN, "Passive")
   field(DTYP, "Soft Channel")
-  field(OUT, "$(prefix)-PLC-01:ENCSEQ")
+  field(OUT, "$(prefix)-STAT-01:ENCSEQ")
   field(ZNAM, "Powered")
   field(ONAM, "Un-powered")
 }
