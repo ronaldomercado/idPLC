@@ -83,25 +83,15 @@ record(ao, "$(prefix)-PLC-01:OUT:STOP") {
   field(OUT, "@pport Motion_Stop_Request S 1")
 }
 
-
 # encoder power request
-record(bo, "$(prefix)-STAT-01:ENCPWR") {
+record(ao, "$(prefix)-STAT-01:ENCPWR") {
   field(DESC, "Power-cycle encoders")
   field(SCAN, "Passive")
   field(DTYP, "Soft Channel")
-  field(OUT, "$(prefix)-STAT-01:ENCSEQ")
-  field(ZNAM, "Powered")
-  field(ONAM, "Un-powered")
-}
-
-record(seq, "$(prefix)-STAT-01:ENCSEQ") {
-  field(SCAN, "Passive")
-  field(DLY1, "0.0")
-  field(DOL1, "1")
-  field(LNK1, "$(prefix)-PLC-01:OUT:D105 PP")
-  field(DLY2, "1.5")
-  field(DOL2, "0")
-  field(LNK2, "$(prefix)-PLC-01:OUT:D105 PP")
+  field(OUT, "$(prefix)-PLC-01:OUT:D105 PP")
+  field(DOL, "1")
+  field(OMSL, "closed_loop")
+  field(DRVH, "2")
 }
 
 # Remote Encoder Power Cycle: 1 -> Power Cycle
