@@ -75,18 +75,21 @@ record(ai, "$(prefix)-STAT-01:TILTSAFE") {
   field(DTYP, "EtherIP")
   field(SCAN, "1 second")
   field(INP, "@$(port) T.Safe_Window[1]")
+  field(PREC, "3")
 }
 record(ai, "$(prefix)-STAT-01:TILTABS") {
   field(DESC, "Tilt absolute window")
   field(DTYP, "EtherIP")
   field(SCAN, "1 second")
   field(INP, "@$(port) T.Absolute_Window[1]")
+  field(PREC, "3")
 }
 record(ai, "$(prefix)-STAT-01:TILTEXTR") {
   field(DESC, "Tilt extreme window")
   field(DTYP, "EtherIP")
   field(SCAN, "1 second")
   field(INP, "@$(port) T.Extreme_Window[1]")
+  field(PREC, "3")
 }
 
 record(ai, "$(prefix)-TILT-01:STA:INP") {
