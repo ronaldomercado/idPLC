@@ -2,6 +2,7 @@
 # % macro, prefix, device prefix, e.g. SR02K-MO
 # % macro, port, port name of ether_ip driver
 
+# % archiver 10.0 Monitor
 record(ai, "$(prefix)-TILT-01:DER:MRADS"){
   field(DESC, "Tilt pot upper derived (mrads)")
   field(EGU, "mrads")
@@ -12,6 +13,8 @@ record(ai, "$(prefix)-TILT-01:DER:MRADS"){
   field(SCAN, ".1 second")
   field(INP,  "@$(port) PT.Measured[1]")
 }
+
+# % archiver 10.0 Monitor
 record(ai, "$(prefix)-TILT-02:DER:MRADS"){
   field(DESC, "Tilt pot lower derived (mrads)")
   field(EGU, "mrads")
@@ -169,6 +172,7 @@ record(ao, "$(prefix)-ORIDE-02:DER:WR") {
 }
 
 # GSF
+# % archiver 10.0 Monitor
 record(ai, "$(prefix)-STAT-01:ENCDIST"){
   field(DTYP, "EtherIP")
   field(SCAN, "1 second")

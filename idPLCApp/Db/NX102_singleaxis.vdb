@@ -16,7 +16,7 @@ template() {
 }
 
 # POT position
-
+# % archiver 0.1 Monitor
 record(ai, "$(prefix)-AXIS-0$(nn):RAW"){
   field(DESC, "Axis $(nn) Pot raw")
   field(DTYP, "EtherIP")
@@ -46,7 +46,7 @@ record(calc, "$(prefix)-AXIS-0$(nn):POS"){
 }
 
 # POT offset
-
+# % archiver 10.0 Monitor
 record(ai, "$(prefix)-AXIS-0$(nn):OFF"){
   field(DESC, "Axis $(nn) pot offset")
   field(DTYP, "EtherIP")
