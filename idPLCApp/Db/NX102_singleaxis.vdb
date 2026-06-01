@@ -77,7 +77,7 @@ record(ao, "$(prefix)-AXIS-0$(nn):OUT:PSLIM") {
   field(OUT,  "@$(port) AL.High_Limit[$(nn)] S 0.5")
   field(PREC, "3")
 }
-
+# % archiver 10.0 Monitor
 record(ai, "$(prefix)-AXIS-0$(nn):PSLIM") {
   field(DESC, "Axis $(nn) +ve soft limit")
   field(DTYP, "EtherIP")
@@ -97,6 +97,7 @@ record(ao, "$(prefix)-AXIS-0$(nn):OUT:NSLIM") {
   field(PREC, "3")
   field(OUT,  "@$(port) AL.Low_Limit[$(nn)] S 0.5")
 }
+# % archiver 10.0 Monitor
 record(ai, "$(prefix)-AXIS-0$(nn):NSLIM") {
   field(DESC, "Axis $(nn) -ve soft limit")
   field(DTYP, "EtherIP")
