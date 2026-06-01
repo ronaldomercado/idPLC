@@ -218,7 +218,9 @@ record(ao, "$(prefix)-ORIDE-02:WR") {
   field(DTYP, "EtherIP")
   field(OUT, "@$(port) T.Ovr_Window[2] S 1")
 }
+
 # tilt sensor temperature
+#% archiver 10.0 Monitor
 record(ai, "$(prefix)-TILT-01:TEMP") {
   field(DTYP, "EtherIP")
   field(DESC, "Tilt temperature upper (degC)")
@@ -229,6 +231,7 @@ record(ai, "$(prefix)-TILT-01:TEMP") {
   field(MDEL, "0.15")
   field(SCAN, "1 second")
 }
+#% archiver 10.0 Monitor
 record(ai, "$(prefix)-TILT-02:TEMP") {
   field(DTYP, "EtherIP")
   field(DESC, "Tilt temperature lower (degC)")
