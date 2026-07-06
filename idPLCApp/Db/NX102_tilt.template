@@ -13,6 +13,7 @@ record(ao, "$(prefix)-TILT-01:OUT:UOFF"){
     field(DRVH, "1000")
     field(DRVL, "-1000")
     field(OUT,  "@$(port) T.Offset[1] S 0.5")
+    field(PREC, "3")
 }
 
 # % archiver 10.0 Monitor
@@ -22,7 +23,7 @@ record(ai, "$(prefix)-TILT-01:UOFF"){
     field(INP,  "@$(port) T.Offset_RB[1]")
     field(SCAN, "1 second")
     field(EGU,  "urad")
-    field(PREC, "2")
+    field(PREC, "3")
 }
 
 record(ao, "$(prefix)-TILT-02:OUT:LOFF"){
@@ -32,6 +33,7 @@ record(ao, "$(prefix)-TILT-02:OUT:LOFF"){
     field(DRVH, "1000")
     field(DRVL, "-1000")
     field(OUT,  "@$(port) T.Offset[2] S 0.5")
+    field(PREC, "3")
 }
 
 # % archiver 10.0 Monitor
@@ -41,6 +43,7 @@ record(ai, "$(prefix)-TILT-02:LOFF"){
     field(INP,  "@$(port) T.Offset_RB[2]")
     field(SCAN, "1 second")
     field(EGU, "urad")
+    field(PREC, "3")
 }
 # % archiver 10.0 Monitor
 record(ai, "$(prefix)-TILT-01:TILT"){
@@ -65,7 +68,7 @@ record(ai, "$(prefix)-TILT-02:TILT"){
     field(DTYP, "EtherIP")
     field(SCAN, ".1 second")
     field(INP,  "@$(port) T.Measured[2]")
-    field(FLNK, "$(prefix)-TILT-02:MRADS")    
+    field(FLNK, "$(prefix)-TILT-02:MRADS")
 }
 # % archiver 10.0 Monitor
 record(ai, "$(prefix)-TILT-02:MRADS") {
@@ -247,5 +250,5 @@ record(ai, "$(prefix)-TILT-02:TEMP") {
   field(PREC, "1")
   field(ADEL, "0.15")
   field(MDEL, "0.15")
-  field(SCAN, "1 second")  
+  field(SCAN, "1 second")
 }
