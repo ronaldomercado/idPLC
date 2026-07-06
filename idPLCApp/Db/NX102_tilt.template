@@ -22,7 +22,7 @@ record(ai, "$(prefix)-TILT-01:UOFF"){
     field(DTYP, "EtherIP")
     field(INP,  "@$(port) T.Offset_RB[1]")
     field(SCAN, "1 second")
-    field(EGU,  "urad")
+    field(EGU,  "mrad")
     field(PREC, "3")
 }
 
@@ -34,6 +34,7 @@ record(ao, "$(prefix)-TILT-02:OUT:LOFF"){
     field(DRVL, "-1000")
     field(OUT,  "@$(port) T.Offset[2] S 0.5")
     field(PREC, "3")
+    field(EGU,  "mrad")
 }
 
 # % archiver 10.0 Monitor
@@ -42,7 +43,7 @@ record(ai, "$(prefix)-TILT-02:LOFF"){
     field(DTYP, "EtherIP")
     field(INP,  "@$(port) T.Offset_RB[2]")
     field(SCAN, "1 second")
-    field(EGU, "urad")
+    field(EGU, "mrad")
     field(PREC, "3")
 }
 # % archiver 10.0 Monitor
@@ -55,9 +56,9 @@ record(ai, "$(prefix)-TILT-01:TILT"){
 }
 # % archiver 10.0 Monitor
 record(ai, "$(prefix)-TILT-01:MRADS"){
-  field(DESC, "Tilt sensor upper (mrads)")
+  field(DESC, "Tilt sensor upper (mrad)")
   field(INP, "$(prefix)-TILT-01:TILT")
-  field(EGU, "mrads")
+  field(EGU, "mrad")
   field(PREC, "4")
   field(ADEL, "0.005")
   field(MDEL, "0.0010")
@@ -72,9 +73,9 @@ record(ai, "$(prefix)-TILT-02:TILT"){
 }
 # % archiver 10.0 Monitor
 record(ai, "$(prefix)-TILT-02:MRADS") {
-  field(DESC, "Tilt sensor lower (mrads)")
+  field(DESC, "Tilt sensor lower (mrad)")
   field(INP, "$(prefix)-TILT-02:TILT")
-  field(EGU, "mrads")
+  field(EGU, "mrad")
   field(PREC, "4")
   field(ADEL, "0.005")
   field(MDEL, "0.0010")
