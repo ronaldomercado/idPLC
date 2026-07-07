@@ -27,7 +27,7 @@ def moveToMain(axis):
     caput(f"TS02K-MO-AXIS-0{axis}:PS:END.PROC",1)
 
 
-output=open("data-scan-2026-05-13-500um.txt","w")
+output=open("data-scan-2026-05-28-500um.txt","w")
 demand = "TS02K-MO-SERVC-01:CS:GAP"
 start_gap = 4
 step=.5
@@ -35,8 +35,8 @@ end_gap = 100
 gap = start_gap
 index = 0
 
-for axis in range(1,5):
-    potClear(axis)
+# for axis in range(1,5):
+#     potClear(axis)
 
 okay=True
 while okay:
@@ -51,7 +51,7 @@ while okay:
         enc=caget(encoderPv)
         print(gap, axis, pot, enc, file=output)
         print(gap, axis, pot, enc, file=sys.stdout)
-        program(index,axis, pot, enc)
+        #program(index,axis, pot, enc)
     print(f"programming index {index} done", file=sys.stdout)
     gap = gap + step
     index += 1
@@ -62,8 +62,8 @@ while okay:
         if gap < end_gap:
             okay = False
 
-for axis in range(1,5):
-    moveToMain(axis)
+# for axis in range(1,5):
+#     moveToMain(axis)
 
 
 output.close()
