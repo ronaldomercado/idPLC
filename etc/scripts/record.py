@@ -9,24 +9,6 @@ import epicscorelibs.path.cothread
 from cothread.catools import caget, camonitor, caput
 from cothread.cothread import Sleep
 
-def potClear(axis):
-    caput(f"TS02K-MO-AXIS-0{axis}:PS:CLEAR.PROC",1)
-
-def program(index, axis, pot, enc):
-    indexPv=f"TS02K-MO-AXIS-0{axis}:PS:INDEX"
-    caput(indexPv,index)
-    potvaluePV=f"TS02K-MO-AXIS-0{axis}:PS:OUT:POT"
-    encvalueOutPV=f"TS02K-MO-AXIS-0{axis}:PS:OUT:ENC"
-    caput(potvaluePV, pot)
-    caput(encvalueOutPV, enc)
-    Sleep(0.5)
-    caput(f"TS02K-MO-AXIS-0{axis}:PS:SETIDX.PROC", 1)
-    Sleep(0.5)
-
-def moveToMain(axis):
-    caput(f"TS02K-MO-AXIS-0{axis}:PS:END.PROC",1)
-
-
 output=open("data-scan-2026-05-28-500um.txt","w")
 demand = "TS02K-MO-SERVC-01:CS:GAP"
 start_gap = 4
