@@ -1,6 +1,6 @@
 #!/dls_sw/prod/python3/RHEL7-x86_64/softioc/4.4.0/prefix/bin/pythonSoftIOC
 #
-# script to capture and print a row of values from the sensors
+# script to capture and print a set of values from the four axes
 #
 import sys
 import cothread

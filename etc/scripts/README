@@ -1,0 +1,8 @@
+
+scripts in this folder
+
+capture.py  - collect data point
+potread.py  - script to read potentiometer table from plc
+program1.py - script to read a data file and program axis 1
+record.py   - script to collect data while moving
+
