@@ -1,6 +1,7 @@
-0-8 fix EGU for potentiometer tilt PVs
-0-7 add scripts related to programming plc
-    fix EGU for OUT:UOFF
+0-7 fix EGU for OUT:UOFF
+    fix EGU for potentiometer tilt PVs
+    add template for status - idplc_status
+    add scripts related to programming plc
 0-6 set PREC to 3 decimal places for tilt sensor offsets
 0-5 add missing archiver tag for tilt sensor offsets
     re jira ID-1010

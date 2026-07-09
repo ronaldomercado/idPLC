@@ -24,6 +24,7 @@ DB += NX102_axisexp.template
 DB += NX102_id.template
 DB += NX102_idoverrides.template
 DB += NX102_idpotscan.template
+DB += idplc_status.template
 
 include $(TOP)/configure/RULES
 #----------------------------------------

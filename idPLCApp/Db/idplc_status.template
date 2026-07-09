@@ -1,0 +1,37 @@
+# % macro, __doc__, Template to define plc status
+# % macro, prefix, pv prefix e.g. TS02K-MO-
+
+#% archiver 10 Monitor
+# NMSTOP is taken from the motion stop status of axis 1
+record(bi, "$(prefix)STAT-01:NMSTOP:BI") {
+  field(SCAN, ".5 second")
+  field(DESC, "Motion Stop Not Active")
+  field(DTYP, "Soft Channel")
+  field(INP, "$(prefix)PLC-01:ST2:RAWBIT.B0")
+  field(OSV, "NO_ALARM")
+  field(ZSV, "MAJOR")
+  field(ONAM, "Not Set")
+  field(ZNAM, "Motion Stop")
+}
+
+# button to clear status
+# $(prefix)PLC-01:OUT:ILK
+record(ao, "$(prefix)PLC-01:OUT:ILK")
+{
+  field(FLNK, "$(prefix)PLC-01:SEQCLEAR")
+}
+
+record(seq, "$(prefix)PLC-01:SEQCLEAR")
+{
+   field(DESC, "clear interlocks")
+   field(LNK1, "$(prefix)-PLC-01:LIM:RESET.PROC")
+   field(DOL1, "1")
+   field(LNK2, "$(prefix)-PLC-01:SLIM:RESET.PROC")
+   field(DOL2, "1")
+   field(LNK3, "$(prefix)-TILT-01:RESET.PROC")
+   field(DOL3, "1")
+   field(LNK4, "$(prefix)-PLC-01:MAIN:RESET.PROC")
+   field(DOL4, "1")
+   field(LNK5, "$(prefix)MSTOP-01:RESET.PROC")
+   field(DOL5, "1")
+}
