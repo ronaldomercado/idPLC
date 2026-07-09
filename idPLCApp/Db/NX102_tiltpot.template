@@ -4,8 +4,8 @@
 
 # % archiver 10.0 Monitor
 record(ai, "$(prefix)-TILT-01:DER:MRADS"){
-  field(DESC, "Tilt pot upper derived (mrads)")
-  field(EGU, "mrads")
+  field(DESC, "Tilt pot upper derived (mrad)")
+  field(EGU, "mrad")
   field(PREC, "4")
   field(ADEL, "0.005")
   field(MDEL, "0.0010")
@@ -16,8 +16,8 @@ record(ai, "$(prefix)-TILT-01:DER:MRADS"){
 
 # % archiver 10.0 Monitor
 record(ai, "$(prefix)-TILT-02:DER:MRADS"){
-  field(DESC, "Tilt pot lower derived (mrads)")
-  field(EGU, "mrads")
+  field(DESC, "Tilt pot lower derived (mrad)")
+  field(EGU, "mrad")
   field(PREC, "4")
   field(ADEL, "0.005")
   field(MDEL, "0.0010")
