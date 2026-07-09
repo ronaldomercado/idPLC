@@ -24,14 +24,19 @@ record(ao, "$(prefix)PLC-01:OUT:ILK")
 record(seq, "$(prefix)PLC-01:SEQCLEAR")
 {
    field(DESC, "clear interlocks")
-   field(LNK1, "$(prefix)-PLC-01:LIM:RESET.PROC")
+   field(LNK1, "$(prefix)PLC-01:LIM:RESET.PROC")
    field(DOL1, "1")
-   field(LNK2, "$(prefix)-PLC-01:SLIM:RESET.PROC")
+   field(LNK2, "$(prefix)PLC-01:SLIM:RESET.PROC")
    field(DOL2, "1")
-   field(LNK3, "$(prefix)-TILT-01:RESET.PROC")
+   field(LNK3, "$(prefix)TILT-01:RESET.PROC")
    field(DOL3, "1")
-   field(LNK4, "$(prefix)-PLC-01:MAIN:RESET.PROC")
+   field(LNK4, "$(prefix)PLC-01:MAIN:RESET.PROC")
    field(DOL4, "1")
-   field(LNK5, "$(prefix)MSTOP-01:RESET.PROC")
-   field(DOL5, "1")
+}
+
+record(calc, "$(prefix)STAT-01:ANYFAULT")
+{
+   field(INPA, "$(prefix)PLC-01:MAIN:ILK")
+   field(CALC, "A<65535")
+   field(SCAN, ".5 second")
 }
