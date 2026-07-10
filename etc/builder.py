@@ -22,3 +22,5 @@ class NX102_idpotscan(AutoSubstitution):
 class Status(AutoSubstitution):
     TemplateFile = 'idplc_status.template'
 
+class AxisEnable(AutoSubstitution):
+    TemplateFile = 'idplc_axisEna.template'

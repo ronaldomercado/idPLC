@@ -40,3 +40,4 @@ record(calc, "$(prefix)STAT-01:ANYFAULT")
    field(CALC, "A<65535")
    field(SCAN, ".5 second")
 }
+

@@ -1,0 +1,46 @@
+# % macro, __doc__, records for axis enable indicator bit
+# % macro, prefix, record prefix
+
+record(fanout, "$(prefix)SERVC-01:DRFAN")
+{
+  field(DESC, "Drive enable fanout")
+  field(SCAN, ".5 second")
+  field(SELM, "All")
+  field(LNK1, "$(prefix)DRIVE-01:ENABLED")
+  field(LNK2, "$(prefix)DRIVE-02:ENABLED")
+  field(LNK3, "$(prefix)DRIVE-03:ENABLED")
+  field(LNK4, "$(prefix)DRIVE-04:ENABLED")
+}
+
+record(bi, "$(prefix)DRIVE-01:ENABLED")
+{
+  field(DESC, "Axis 1 enable state")
+  field(INP, "$(prefix)PLC-01:ST3:RAWBIT.B0 CP")
+  field(ZNAM, "Drive disabled")
+  field(ONAM, "Drive enabled")
+}
+
+record(bi, "$(prefix)DRIVE-02:ENABLED")
+{
+  field(DESC, "Axis 2 enable state")
+  field(INP, "$(prefix)PLC-01:ST3:RAWBIT.B1 CP")
+  field(ZNAM, "Drive disabled")
+  field(ONAM, "Drive enabled")
+}
+
+record(bi, "$(prefix)DRIVE-03:ENABLED")
+{
+  field(DESC, "Axis 3 enable state")
+  field(INP, "$(prefix)PLC-01:ST3:RAWBIT.B2 CP")
+  field(ZNAM, "Drive disabled")
+  field(ONAM, "Drive enabled")
+}
+
+record(bi, "$(prefix)DRIVE-04:ENABLED")
+{
+  field(DESC, "Axis 4 enable state")
+  field(INP, "$(prefix)PLC-01:ST3:RAWBIT.B3 CP")
+  field(ZNAM, "Drive disabled")
+  field(ONAM, "Drive enabled")
+}
+
