@@ -1,0 +1,7 @@
+# % macro, __doc__, template to create gui tags for plc components
+# % macro, name, gui component name
+# % macro, prefix, device prefix
+# % macro, idname, name for insertion device
+
+# % gui, $(name)0, edm, idplc_Interlocks.edl, prefix=$(prefix),idname=$(idname)
+# % gui, $(name)1, edm, idplc_Config.edl, prefix=$(prefix),idname=$(idname)

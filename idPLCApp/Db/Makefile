@@ -26,6 +26,7 @@ DB += NX102_idoverrides.template
 DB += NX102_idpotscan.template
 DB += idplc_status.template
 DB += idplc_axisEna.template
+DB += idplc_gui.template
 
 include $(TOP)/configure/RULES
 #----------------------------------------
