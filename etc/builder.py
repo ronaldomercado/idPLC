@@ -18,9 +18,12 @@ class NX102_idoverrides(AutoSubstitution):
 
 class NX102_idpotscan(AutoSubstitution):
     TemplateFile = 'NX102_idpotscan.template'
-    
+
 class Status(AutoSubstitution):
     TemplateFile = 'idplc_status.template'
 
 class AxisEnable(AutoSubstitution):
     TemplateFile = 'idplc_axisEna.template'
+
+class idplc_gui(AutoSubstitution):
+    TemplateFile = 'idplc_gui.template'
