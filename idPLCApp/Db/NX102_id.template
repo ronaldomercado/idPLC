@@ -99,5 +99,5 @@ record(ao, "$(prefix)-PLC-01:OUT:D105") {
   field(DESC, "Remote Encoder Power Cycle")
   field(SCAN, "Passive")
   field(DTYP, "EtherIP")
-  field(OUT, "@pport Enc_Power_Request")
+  field(OUT, "@pport Enc_Power_Request S 1")
 }
